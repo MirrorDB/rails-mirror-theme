@@ -17,6 +17,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
+  spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  spec.test_files = Dir['test/**/*']
+
   #================== GEMs to build it GEM, so its improve the development ==============================
   # Base GEMs to build it gem
   spec.add_development_dependency 'rake', '~> 10.0', '>= 10.0'
@@ -28,8 +31,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov', '~> 0.7', '>= 0.7.1'
   # Create readable attrs values
   spec.add_development_dependency 'faker', '~> 1.4', '>= 1.4.2'
+  # SGBD connector
+  spec.add_development_dependency 'mysql2', '~> 0.3.18', '>= 0.3.18'
 
   #================== GEMs to be used when it is called on a project ====================================
   # To pretty print on console
   spec.add_dependency 'colorize', '~> 0.7.3', '>= 0.7.3'
+  spec.add_dependency 'rails', '~> 4.2.1', '>= 4.2.1'
 end
