@@ -1,0 +1,23 @@
+header
+  .side-nav.fixed style="left: 0px;"
+    .menu-top
+      .menu-top-img
+        =image_tag('defaults/profile_landscape2.png')
+    .menu-top-info.waves-effect.waves-block
+      a.menu-top-user href="javascript:void(0)"
+        span.avatar.pull-left
+          =image_tag @current_user.picture, class: "circle grey lighten-3"
+          br
+        div: strong.user_name =@current_user.name
+        div: span.balance.green-text.text-darken-2=to_money @current_user.balance
+
+    ul#side_actions
+      -bg_color = 'teal lighten-2'
+      -font_color = 'white-text'
+      -active_class = "#{bg_color} #{font_color}"
+      -side_nav_actions.each do |action|
+        -action[:controller] == params[:controller] ? active = active_class : active = ''
+        li class="bold #{active}"
+          a class="waves-effect waves-#{bg_color} #{active}" id="#{action[:controller]}" href="#{action[:link]}"
+            i class="left #{action[:icon]}"
+            =action[:name]

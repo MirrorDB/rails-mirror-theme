@@ -1,0 +1,24 @@
+.navbar-fixed
+  nav
+    .nav-wrapper.teal.lighten-2
+      a.brand-logo href="#!"
+        =render 'layouts/partials/components/static/brand'
+        span.screen_name=" - #{t('controllers.'+params[:controller])}"
+
+      /!
+        ul.right.hide-on-med-and-down
+          li: a href="sass.html"
+            i.fa.fa-line-chart.left
+            | Gráficos
+          li: a href="components.html"
+            i.mdi-content-add-circle.left
+            | Entradas
+          li: a href="components.html"
+            i.mdi-content-remove-circle.left
+            | Saídas
+          li: a href="components.html"
+            i.mdi-navigation-apps.left
+            | Apps
+          li: a href="components.html"
+            i.mdi-social-people.left
+            | Pessoas

@@ -1,0 +1,9 @@
+.card-title
+  span =@card_title_msg
+
+.row
+  .divider
+
+-if @floating_btn_link
+  = link_to @floating_btn_link, class: 'btn-floating btn-large waves-effect waves-light right teal lighten-2' do
+    i.mdi-content-add

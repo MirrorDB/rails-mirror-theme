@@ -1,0 +1,55 @@
+.layout_row {
+  margin-left: -6.75rem;
+  margin-right: -6.75rem;
+}
+
+.card-panel.layout {
+  > .card-content {
+    padding: 20px 45px;
+
+    form {
+      margin-bottom: 60px;
+    }
+  }
+
+  .card-title {
+    width: 100%;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .card-title {
+    color: black;
+  }
+
+  .btn-floating.right {
+    top: 19%;
+    right: 12%;
+    position: absolute;
+  }
+
+  a[class^="footer-"].btn-floating.right {
+    position: inherit;
+    margin-top: -40px;
+    margin-right: 35px;
+  }
+
+  button[class^="footer-"].btn-floating.right {
+    position: inherit;
+  }
+
+  .card-reveal {
+    .btn-floating.right {
+      top: 70%;
+    }
+
+    .edit {
+      right: 35%;
+    }
+
+    .delete {
+      right: 5%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.app_page
+  =image_tag @bg_img, class: 'bg_app activator'
+  .opaque_bg
+
+  -pic = @obj[:pic]
+  -if pic
+    =image_tag @obj[:pic], class: 'app_brand circle'
+  -else
+    .default_brand
+      center: i class="circle default_brand #{colors_name(@id)} darken-2 white-text mdi-action-store"
+
+-@id=nil
+-@bg_img=nil

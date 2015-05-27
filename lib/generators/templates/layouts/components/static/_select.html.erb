@@ -1,0 +1,18 @@
+<%
+=begin
+    Create:
+    @options[:selected] = 'Choose...'
+    @options[:array] = [{value:, msg:}]
+    @options[:skip_0] = boolean
+=end
+%>
+
+
+<select name="<%=@options[:name]%>">
+  <option disabled selected><%= @options[:default_msg] %></option>
+  <% @options[:array].each_with_index do |option, i| %>
+      <% next if @options[:skip_0] && i==0 %>
+      <% @options[:selected] == option[:value] ? state='selected' : state='' %>
+      <option value="<%=option[:value]%>" <%=state%>><%=option[:msg]%></option>
+  <% end %>
+</select>
